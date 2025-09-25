@@ -1,6 +1,3 @@
-[include] 
-	path = ~/.gitconfig.gh
-
 [core]
 	editor = code --wait
 	autocrlf = false
