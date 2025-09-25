@@ -1,6 +1,6 @@
 param(
     [string]$Distro = "archlinux",
-    [string]$InstallUrl = "https://gist.githubusercontent.com/minipog/d901176d9bb2275a0f7c801687679d61/raw/af3eeadb9a874d2b909ad846d6b8b2e4f9061139/init-arch.sh"
+    [string]$InstallUrl = "https://gist.githubusercontent.com/minipog/d901176d9bb2275a0f7c801687679d61/raw/1e9b1f1c56627611291565baa9eeefeacff04a61/init-arch.sh"
 )
 
 function Step([string]$msg) { Write-Host "`n==> $msg" -ForegroundColor Cyan }
