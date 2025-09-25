@@ -1,0 +1,71 @@
+[include] 
+	path = ~/.gitconfig.gh
+
+[core]
+	editor = code --wait
+	autocrlf = false
+	eol = lf
+
+[user]
+	email = 62334305+minipog@users.noreply.github.com
+	name = minipog
+
+[init]
+	defaultBranch = main
+
+[pull]
+	ff = only
+
+[push]
+	autoSetupRemote = true
+	followTags = true
+
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+
+[column]
+	ui = auto
+
+[branch]
+	sort = -committerdate
+
+[tag]
+	sort = version:refname
+
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+
+[commit]
+	verbose = true
+
+[rerere]
+	enabled = true
+	autoupdate = true
+
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+
+[merge]
+	conflictstyle = zdiff3
+
+[alias]
+	st = status -sb
+	lg = log --graph --decorate --color --pretty=format:'%C(magenta)%h %C(bold brightblack)%s %C(reset black)<%an, %ad>' --date=relative
+	rs = restore --staged --
+	cm = commit -m
+	ca = commit -am
+	ce = commit --amend -m
+	cf = commit --amend --no-edit
+	cu = reset --soft HEAD~1
+	fpwl = push --force-with-lease
+	prev = switch -
+	sync = "!git fetch origin && git rebase origin/main"
+	prcf = "!gh prcf"
+	prms = "!gh prms"
