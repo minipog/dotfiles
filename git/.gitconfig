@@ -66,3 +66,11 @@
 	sync = "!git fetch origin && git rebase origin/main"
 	prcf = "!gh prcf"
 	prms = "!gh prms"
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
