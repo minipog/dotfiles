@@ -21,10 +21,8 @@ pacman -S --noconfirm --needed base base-devel sudo zsh git github-cli
 step "Creating user $USERNAME"
 if ! id -u "$USERNAME" &>/dev/null; then
   useradd -m -G wheel -s /bin/zsh "$USERNAME"
-  echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
+  echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/wheel
   chmod 440 /etc/sudoers.d/wheel
-  echo "→ Please set a password for $USERNAME:"
-  passwd "$USERNAME"
 fi
 
 step "Configuring WSL default user"
